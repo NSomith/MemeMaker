@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/memeTemplateFragment2"
+        android:title="Templates"
+        />
+    <item
+        android:id="@+id/photoSaveInternalStroage"
+        android:title="Saved Memes"
+        />
+</menu>

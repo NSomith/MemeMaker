@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/memeTemplateFragment2">
+
+    <fragment
+        android:id="@+id/memeTemplateFragment2"
+        android:name="com.example.mememaker.ui.MemeTemplateFragment"
+        android:label="MemeTemplateFragment" />
+    <fragment
+        android:id="@+id/photoSaveInternalStroage"
+        android:name="com.example.mememaker.ui.internalStrage.PhotoSaveInternalStroage"
+        android:label="PhotoSaveInternalStroage" />
+</navigation>
