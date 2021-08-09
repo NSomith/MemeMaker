@@ -7,9 +7,47 @@
     <fragment
         android:id="@+id/memeTemplateFragment2"
         android:name="com.example.mememaker.ui.MemeTemplateFragment"
-        android:label="MemeTemplateFragment" />
+        android:label="MemeTemplateFragment" >
+        <action
+            android:id="@+id/action_memeTemplateFragment2_to_memeCreateFragment"
+            app:destination="@id/memeCreateFragment" />
+        <action
+            android:id="@+id/action_memeTemplateFragment2_to_memeByTextFragment"
+            app:destination="@id/memeByTextFragment" />
+    </fragment>
     <fragment
         android:id="@+id/photoSaveInternalStroage"
         android:name="com.example.mememaker.ui.internalStrage.PhotoSaveInternalStroage"
         android:label="PhotoSaveInternalStroage" />
+    <dialog
+        android:id="@+id/dialogueOptions"
+        android:name="com.example.mememaker.ui.DialogueOptions"
+        android:label="DialogueOptions" >
+        <action
+            android:id="@+id/action_dialogueOptions_to_memeByTextFragment"
+            app:destination="@id/memeByTextFragment" />
+        <action
+            android:id="@+id/action_dialogueOptions_to_memeCreateFragment"
+            app:destination="@id/memeCreateFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/memeByTextFragment"
+        android:name="com.example.mememaker.ui.MemeByTextFragment"
+        android:label="MemeByTextFragment" >
+        <argument
+            android:name="resource"
+            app:argType="integer" />
+        <argument
+            android:name="uri"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/memeCreateFragment"
+        android:name="com.example.mememaker.ui.MemeCreateFragment"
+        android:label="MemeCreateFragment" >
+        <argument
+            android:name="resource"
+            app:argType="integer" />
+    </fragment>
 </navigation>
