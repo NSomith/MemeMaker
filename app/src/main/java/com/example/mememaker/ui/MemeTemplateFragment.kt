@@ -17,6 +17,7 @@ import com.example.mememaker.adapter.TemplateAdapter
 import com.example.mememaker.databinding.FragmentMemeTemplateBinding
 import com.example.mememaker.utils.TemplateList.TEMPLATE_LIST
 import com.theartofdev.edmodo.cropper.CropImage
+import  com.example.mememaker.ui.DialogueOptions
 
 class MemeTemplateFragment : Fragment(R.layout.fragment_meme_template),
     TemplateAdapter.OnAdapterTemplateListener {
@@ -49,7 +50,7 @@ class MemeTemplateFragment : Fragment(R.layout.fragment_meme_template),
                 Toast.makeText(requireContext(), "no image selected", Toast.LENGTH_SHORT).show()
             } else {
                 findNavController().navigate(
-                    MemeTemplateFragmentDirections.actionMemeTemplateFragment2ToMemeByTextFragment(
+                    MemeTemplateFragmentDirections.actionMemeTemplateFragmentToMemeByTextFragment(
                         -1,
                         it.toString()
                     )
@@ -82,6 +83,6 @@ class MemeTemplateFragment : Fragment(R.layout.fragment_meme_template),
     }
 
     override fun OnAdapterClick(resource: Int) {
-        DialogueOptions().getInstance(resource).show(parentFragmentManager, "dialog")
+        DialogueOptions().getInstance(resource).show(childFragmentManager, "dialog")
     }
 }

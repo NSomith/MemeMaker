@@ -1,10 +1,8 @@
 package com.example.mememaker
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavHostController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -26,14 +24,14 @@ class MainActivity : AppCompatActivity() {
         navView = findViewById(R.id.nav_view)
 
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.memeTemplateFragment2, R.id.photoSaveInternalStroage),
+            setOf(R.id.memeTemplateFragment, R.id.photoSaveInternalStroage),
             drawerLayout
         )
 
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.memeTemplateFragment2 -> {
-                    navController?.navigate(R.id.memeTemplateFragment2)
+                R.id.memeTemplateFragment -> {
+                    navController?.navigate(R.id.memeTemplateFragment)
                     drawerLayout.close()
                 }
                 R.id.photoSaveInternalStroage -> {

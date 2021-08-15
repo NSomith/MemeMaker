@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/memeTemplateFragment2">
+    app:startDestination="@id/memeTemplateFragment">
 
     <fragment
-        android:id="@+id/memeTemplateFragment2"
+        android:id="@+id/memeTemplateFragment"
         android:name="com.example.mememaker.ui.MemeTemplateFragment"
         android:label="MemeTemplateFragment" >
         <action
-            android:id="@+id/action_memeTemplateFragment2_to_memeCreateFragment"
-            app:destination="@id/memeCreateFragment" />
-        <action
-            android:id="@+id/action_memeTemplateFragment2_to_memeByTextFragment"
+            android:id="@+id/action_memeTemplateFragment_to_memeByTextFragment"
             app:destination="@id/memeByTextFragment" />
+        <action
+            android:id="@+id/action_memeTemplateFragment_to_memeCreateFragment"
+            app:destination="@id/memeCreateFragment" />
     </fragment>
     <fragment
         android:id="@+id/photoSaveInternalStroage"
@@ -33,7 +34,7 @@
     <fragment
         android:id="@+id/memeByTextFragment"
         android:name="com.example.mememaker.ui.MemeByTextFragment"
-        android:label="MemeByTextFragment" >
+        android:label="MemeByTextFragment">
         <argument
             android:name="resource"
             app:argType="integer" />
